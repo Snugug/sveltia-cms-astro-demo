@@ -1,14 +1,24 @@
+# Backend configuration for the CMS. Any backend will also support working with your repository locally by choosing it at the login screen.
 backend:
+  # The backend to use 
   name: github
-  branch: main # change this to your branch
-  repo: snugug/sveltia-cms-astro-demo # change this to your repo
-  site_domain: feran.quest # change this to your domain
-  base_url: https://snugug.github.io/sveltia-cms-astro-demo # change this to your prod URL
-  auth_endpoint: oauth # the oauth route provided by the integration
+  # The branch to commit to. Cannot be protected
+  branch: main 
+  # The repository from your backend to work from
+  repo: snugug/sveltia-cms-astro-demo
+  # The domain your site is hosted on, without protocol
+  site_domain: snugug.github.io
+  # The full base URL of your site, including protocol and subpath
+  base_url: https://snugug.github.io/sveltia-cms-astro-demo
+  # The OAuth route to use for authentication. GitHub requires a backend server, or you can authenticate with a Personal Access Token directly in browser
+  auth_endpoint: oauth
 
+# The source URL to store CMS uploaded media
 media_folder: public/media
+# The folder where media will be served from
 public_folder: /media
 
+# Content collections
 collections:
   - label: Blog
     name: blog
