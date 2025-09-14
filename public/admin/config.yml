@@ -15,8 +15,8 @@ backend:
 
 # The source URL to store CMS uploaded media
 media_folder: public/media
-# The folder where media will be served from
-public_folder: /media
+# The folder where media will be served from. If your site is served from a subpath, it must be included here.
+public_folder: /sveltia-cms-astro-demo/media
 
 # Content collections
 collections:
