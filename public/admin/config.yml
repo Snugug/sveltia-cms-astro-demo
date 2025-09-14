@@ -1,0 +1,23 @@
+backend:
+  name: github
+  branch: main # change this to your branch
+  repo: snugug/sveltia-cms-astro-demo # change this to your repo
+  site_domain: feran.quest # change this to your domain
+  base_url: https://snugug.github.io/sveltia-cms-astro-demo # change this to your prod URL
+  auth_endpoint: oauth # the oauth route provided by the integration
+
+media_folder: public/media
+public_folder: /media
+
+collections:
+  - label: Blog
+    name: blog
+    folder: src/content/posts
+    create: true
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Body
+        name: body
+        widget: markdown
